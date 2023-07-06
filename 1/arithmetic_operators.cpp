@@ -13,5 +13,9 @@ int main(int argc, char** argv)
     inc = ++sum;
     int dec = sum--;
     dec = --sum;
+
+    int x = 1;
+    printf("%d\n", ++x);
+
     return 0;
 }

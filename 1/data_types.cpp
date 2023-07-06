@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <sys/types.h>
 
 int main(int argc, char** argv)
 {
@@ -6,6 +7,9 @@ int main(int argc, char** argv)
 
     int a = 69; // integer data type (2 or 4 bytes)
     printf("int size = %d\n", sizeof(a));
+
+    // byte, short, long
+    // signed, unsigned
 
     float b = 329.123; // floating-point data type (4 bytes)
     printf("float size = %d\n", sizeof(b));

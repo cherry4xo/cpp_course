@@ -42,3 +42,9 @@ void nice_loop_bro()
 
     return;
 }
+
+int main(int argc, char** argv)
+{
+    nice_loop_bro();
+    return 0;
+}
