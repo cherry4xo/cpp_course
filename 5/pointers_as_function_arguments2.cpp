@@ -15,7 +15,7 @@ int SumOfElemsWithoutSize(int a[])
     int size = sizeof(a) / sizeof(a[0]);
     printf("Size in sum function = %d\n", size);
     for (size_t i = 0; i < size; ++i) {
-        sum += a[i]; // or*(a + i)
+        sum += a[i]; // or *(a + i)
     }
     return sum;
 }
