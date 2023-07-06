@@ -1,4 +1,6 @@
 #include <iostream>
+#include <math.h>
+
 
 int main(int argc, char** argv)
 {
@@ -7,12 +9,16 @@ int main(int argc, char** argv)
         std::cout << i << std::endl;
     }
 
+    std::cout << std::pow(2, 10) << std::endl;
+
+    int i = 0;
     for(;;)
     {
-        std::cout << "10\n";
+        if (i > 10) 
+            break;
+        std::cout << i << "\n";
+        i++;
     }
-
-    
 
     return 0;
 }

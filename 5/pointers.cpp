@@ -4,11 +4,11 @@ void simple_working()
 {
     int a = 10;
     int* p = &a;
-    printf("Address of p: %d\n", p);
-    printf("Value at p: %d\n", *p);
+    printf("Address of p: %d\n", p); // адрес памяти
+    printf("Value at p: %d\n", *p); // 10
     int b = 20;
     *p = b;
-    printf("Value at p: %d\n", *p);
+    printf("Value at p: %d\n", *p); // 20
 
     return;
 }
@@ -43,7 +43,7 @@ void void_pointers()
 
 int main(int argc, char** argv)
 {
-    void_pointers();
+    pointers_arithmetic();
 
     return 0;
 }
