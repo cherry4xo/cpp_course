@@ -14,10 +14,14 @@ void pointer_to_pointer()
     printf("%d\n", **q); // *(*q) the same and this is better for perception
     printf("%d\n", *(*r));
     printf("%d\n", *(*(*r)));
-    ***r = 10;
+
+    int a = 0xff;
     printf("%d\n", x);
-    **q = *p + 2;
-    printf("%d\n", x);
+
+    // ***r = 10;
+    // printf("%d\n", x);
+    // **q = *p + 2;
+    // printf("%d\n", x);
 }
 
 int main(int argc, char** argv)

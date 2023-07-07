@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <sys/types.h>
 
 void simple_working()
 {
@@ -9,6 +10,7 @@ void simple_working()
     int b = 20;
     *p = b;
     printf("Value at p: %d\n", *p); // 20
+    printf("Value at p: %d\n", a); // 20
 
     return;
 }
@@ -43,7 +45,7 @@ void void_pointers()
 
 int main(int argc, char** argv)
 {
-    pointers_arithmetic();
+    
 
     return 0;
 }
