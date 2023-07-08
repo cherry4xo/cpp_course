@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+void foo(int (*p)[2][2])
+{
+
+}
+
 void three_dimensional()
 {
     int c[3][2][2] = {{{2, 5}, {7, 9}}, {{3, 4}, {6, 1}}, {{0, 8}, {11, 13}}};
