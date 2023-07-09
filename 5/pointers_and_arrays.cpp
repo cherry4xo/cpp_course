@@ -33,8 +33,8 @@ void pointer_to_array()
 
 int main(int argc, char** argv)
 {
-    //array_structure();
-    pointer_to_array();
+    array_structure();
+    // pointer_to_array();
 
     return 0;
 }

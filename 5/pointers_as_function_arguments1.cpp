@@ -7,7 +7,12 @@ void Increment_by_value(int a)
     printf("Address of an a variable in the function = %d\n", &a);
 }
 
-void Increment_by_reference(int *p)
+int inc(int a)
+{
+    return a + 1;
+}
+
+void Increment_by_reference(int* p)
 {
     *p = *p + 1;
     printf("Address of an a variable in the function = %d\n", p);

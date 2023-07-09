@@ -10,12 +10,12 @@ void basic_syntax()
     // why + 1??? because the last one byte is point that the last character of the string was the last
     // this is \0 character
 
-    char c[5];
-    c[0] = 'j';
-    c[1] = 'o';
-    c[2] = 'h';
-    c[3] = 'n';
-    c[4] = '\0';
+    char c[] = "John";
+    // c[0] = 'j';
+    // c[1] = 'o';
+    // c[2] = 'h';
+    // c[3] = 'n';
+    // c[4] = '\0';
     int len = strlen(c);
     // int len = sizeof(c) / sizeof(c[0]);
     printf("%s, %d\n", c, len);
@@ -65,7 +65,7 @@ void print(char* c)
 
 void arrays_and_functions()
 {
-    // array are always passed to function by reference
+    // arrays are always passed to function by reference
     char c[20] = "Hello";
     print(c);
 
@@ -74,7 +74,7 @@ void arrays_and_functions()
 
 int main(int argc, char** argv)
 {
-    arrays_and_functions();
+    basic_syntax();
 
     return 0;
 }

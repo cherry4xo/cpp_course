@@ -9,7 +9,7 @@ int SumOfElemsWithSize(int a[], int size)
     return sum;
 }
 
-int SumOfElemsWithoutSize(int a[])
+int SumOfElemsWithoutSize(int* a)
 {
     int sum = 0;
     int size = sizeof(a) / sizeof(a[0]);
@@ -22,7 +22,7 @@ int SumOfElemsWithoutSize(int a[])
 
 void foo()
 {
-    int a[] = {1, 2, 3, 4, 5};
+    int a[5] = {1, 2, 3, 4, 5};
     int size = sizeof(a) / sizeof(a[0]);
     printf("Size in main function = %d\n", size);
     int value1 = SumOfElemsWithSize(a, size); // or &a[0]
