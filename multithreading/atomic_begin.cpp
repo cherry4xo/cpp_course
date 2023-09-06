@@ -65,9 +65,66 @@ void stop_thread1()
     stopped.store(true, std::memory_order_relaxed);
 }
 
+// --- seq_cst ---
+std::atomic<bool> x, y;
+std::atomic<int> z;
+
+
+void thread_write_x()
+{
+    x.store(true, std::memory_order_seq_cst);
+}
+
+void thread_write_y()
+{
+    y.store(true, std::memory_order_seq_cst);
+}
+
+void thread_read_x_then_y()
+{
+    while(!x.load(std::memory_order_seq_cst));
+    if(y.load(std::memory_order_seq_cst))
+    {
+        ++z;
+    }
+}
+
+void thread_read_y_then_x()
+{
+    while(!y.load(std::memory_order_seq_cst));
+    if(x.load(std::memory_order_seq_cst))
+    {
+        ++z;
+    }
+}
+
+std::thread th1(thread_write_x);
+std::thread th2(thread_write_y);
+std::thread th3(thread_read_x_then_y);
+std::thread th4(thread_read_y_then_x);
+std::thread thread0([&](){
+        for(size_t i = 0; i < 10; ++i)
+            std::cout << i << " ";
+        std::cout << std::endl;
+    });
+
+
+void race_condition()
+{
+    thread0.join();
+    z.store(0, std::memory_order_seq_cst);
+    th4.join();
+    th3.join();
+    th2.join();
+    th1.join();
+    std::cout << z << std::endl;
+}
+
+
 int main(int argc, char** argv)
 {
-    relaxed();
+    // relaxed();
+    race_condition();
 
     return 0;
 }
