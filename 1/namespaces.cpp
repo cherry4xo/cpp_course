@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <iostream>
 
 namespace foo
 {
@@ -18,6 +19,8 @@ namespace guf
 
 // using namespace foo;
 // using namespace guf;
+
+
 
 int main(int argc, char** argv)
 {
